@@ -28,9 +28,9 @@ keywi does NOT require:
 - Root privileges
 
 
-# Installation
+## Installation
 
-## App
+### App
 
 > _!!! WARNING: The app is still in early stages of development. It is stable but lacks functionality_
 
@@ -44,7 +44,7 @@ The App is a so-called "Universal Application", meaning the executable inside de
 your processor architecture and chooses the respective binary. This means Keywi runs natively
 on both x86 and ARM mac's.
 
-## CLI
+### CLI
 
 First, clone this repository
 ```
@@ -58,13 +58,13 @@ sudo make install
 ```
 
 
-# Usage
+## Usage
 
-## App
+### App
 
 [Todo]
 
-## CLI
+### CLI
 
 `./src/keywi [source key] [destination key]` to map
 
@@ -73,7 +73,7 @@ sudo make install
 `./src/keywi -get` to see mappings
 
 
-# Building the app
+## Building the app
 
 First, clone this repository
 ```
@@ -86,15 +86,15 @@ Then build using Makefile
 make build
 ```
 
-# FAQ
+## FAQ
 
 * > Help! I accidentally mapped some letter keys and can't type out `keywi -clear` anymore.
 
-  Either copy the command from this file and paste it into your terminal, or simply delete 
+  Either copy the command from the usage section and paste it into your terminal, or simply delete 
   `~/Library/LaunchAgents/tv.rande.keywi.plist` using Finder and log out and in again.
 
 * > Why do I need sudo to install keywi-cli?? The main selling point is that it doesn't need sudo!
   
   Well, macOS has no local binary folder in its default PATH, which would be the only binary folder
   make has permission to write in without sudo. I will implement adding a local binary folder to PATH,
-  but for now this is the way. `make install` just copies keywi into `/usr/local/bin`.
+  but for now this is the way. `sudo make install` just copies keywi into `/usr/local/bin`.
